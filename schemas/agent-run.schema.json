@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "agent-run",
+  "type": "object",
+  "required": ["task", "runtime_order"],
+  "properties": {
+    "task": { "type": "string" },
+    "runtime_order": { "type": "array", "items": { "type": "string" } },
+    "safety_level": { "type": "string", "enum": ["low", "medium", "high"] }
+  }
+}

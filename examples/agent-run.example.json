@@ -1,0 +1,5 @@
+{
+  "task": "summarise support incidents and draft next actions",
+  "runtime_order": ["edge", "local", "cloud"],
+  "safety_level": "medium"
+}

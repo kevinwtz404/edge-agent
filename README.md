@@ -15,3 +15,6 @@ Design and implement practical autonomous/semi-autonomous agent setups that exec
 - organisation readiness diagnostics (`ai-readiness`)
 - workflow-level could/should/must-stay-human evaluation (`adoption-eval`)
 - generic RAG reference architecture (`hybrid-rag`)
+
+## archived docs
+Legacy planning and draft evaluation notes are kept in `docs/archive/`.

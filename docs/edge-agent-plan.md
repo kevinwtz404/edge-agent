@@ -1,8 +1,7 @@
 # edge-agent plan (draft v0)
 
 status: in progress
-owner: cynthia
-last updated: 2026-03-20 19:08 GMT
+last updated: 2026-03-22 20:16 GMT
 
 ## purpose
 Define an edge-to-local-to-cloud orchestration pattern for practical AI agents.

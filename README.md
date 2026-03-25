@@ -2,8 +2,6 @@
 
 A practical OpenClaw implementation track for secure operational agents.
 
-Most teams do not fail at pilot ideas. They fail at turning approved pilots into controlled, real-world execution. `edge-agent` exists to close that gap.
-
 ## relationship to adoption-eval
 `adoption-eval` determines whether a workflow pilot should run and under what boundaries.
 `edge-agent` implements that approved pilot as an operational agent pattern.

@@ -12,3 +12,10 @@ internal/
 logs/
 cache/
 state/
+node_modules/
+
+# runtime policy copies (generated from examples)
+config/policy/*.json
+config/policy/*.yaml
+!config/policy/*.example.json
+!config/policy/*.example.yaml

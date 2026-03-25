@@ -57,6 +57,7 @@ This repo is in active pilot-build mode. The current focus is shipping a coheren
 Runtime scaffold now included:
 - `src/index.js` bootstraps policy loading and output contract flow
 - `src/policy.js` enforces allowlist/approval checks in code layer
+- `src/decision.js` applies deterministic qualification gate/score logic (Go/Not yet/No-go)
 - `scripts/bootstrap.sh` installs deps and validates required config files
 - `scripts/run-pilot.sh` runs checks and starts the local pilot runtime
 

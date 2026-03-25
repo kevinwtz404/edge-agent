@@ -1,0 +1,8 @@
+{
+  "businessImpact": 5,
+  "frequency": 5,
+  "baselineMeasurability": 4,
+  "dataReadiness": 4,
+  "boundaryClarity": 4,
+  "pilotability": 4
+}

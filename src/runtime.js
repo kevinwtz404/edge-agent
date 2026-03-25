@@ -1,6 +1,10 @@
-export function buildAnswer({ question, metrics = [], risks = [], actions = [], confidence = 'medium', assumptions = [], sources = [] }) {
+import { evaluateDecision } from './decision.js';
+
+export function buildAnswer({ question, metrics = [], risks = [], actions = [], confidence = 'medium', assumptions = [], sources = [], qualifyScores = {} }) {
+  const decision = evaluateDecision(qualifyScores);
   return {
     headline: `Answer for: ${question}`,
+    decision,
     keyNumbers: metrics,
     whatChanged: 'No historical delta wired yet (runtime scaffold).',
     topRisks: risks,
@@ -11,9 +15,10 @@ export function buildAnswer({ question, metrics = [], risks = [], actions = [], 
   };
 }
 
-export function runQuestionFlow(question) {
+export function runQuestionFlow(question, qualifyScores = {}) {
   return buildAnswer({
     question,
+    qualifyScores,
     metrics: [
       { name: 'atRiskOpportunities', value: 'TBD' },
       { name: 'noActivity14d', value: 'TBD' }

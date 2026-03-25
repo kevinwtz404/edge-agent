@@ -1,31 +1,46 @@
 # edge-agent
 
-OpenClaw-native implementation patterns for secure operational agents.
+A practical OpenClaw implementation track for secure operational agents.
 
-## context
-This repo is a practical pilot implementation track linked to `adoption-eval` outputs.
-When `adoption-eval` surfaces a viable, guardrailed pilot opportunity, `edge-agent` turns that into an executable operational agent pattern.
+Most teams do not fail at pilot ideas. They fail at turning approved pilots into controlled, real-world execution. `edge-agent` exists to close that gap.
 
-Current practical use case: **CRO Command Agent** pilot (read-first intelligence, controlled comms, strong security gates).
+## relationship to adoption-eval
+`adoption-eval` determines whether a workflow pilot should run and under what boundaries.
+`edge-agent` implements that approved pilot as an operational agent pattern.
 
-## purpose
-Design and ship practical policy-gated agents that can operate in real business workflows with auditable controls.
+Current practical use case: **CRO Command Agent** (read-first intelligence, controlled communications, strong policy gates).
 
-## this repo owns
-- OpenClaw-first agent runtime patterns for operational use cases
-- policy, permission, and communication gate design
-- runtime, hardware, and deployment specs (including edge/on-device options)
-- observability, auditability, and incident handling patterns
+## what this is for
+Use this repo to:
+- implement OpenClaw-native pilot agents from approved `adoption-eval` outputs
+- enforce permission and communication controls in runtime, not just policy docs
+- route deterministic checks and model-based summarisation safely
+- ship auditable operational patterns that are production-realistic
 
-## this repo does not own
-- organisation readiness diagnostics (`ai-readiness`)
-- workflow-level could/should/must-stay-human evaluation (`adoption-eval`)
-- generic RAG reference architecture (`hybrid-rag`)
+## who this is for
+- RevOps and GTM operations teams running controlled pilots
+- technical teams implementing policy-gated agent runtimes
+- security-conscious operators who need auditability before autonomy
 
-## pilot docs
-- `docs/cro-command-agent-pilot.md`
-- `docs/security-policy.md`
-- `docs/hardware-and-model-routing.md`
+## what this repo owns
+- OpenClaw-first runtime patterns for operational pilots
+- policy, permission, recipient, and approval gate design
+- deployment profile and hardware rationale for edge execution
+- observability, audit logging, and incident handling patterns
+
+## what this repo does not own
+- organisation readiness diagnostics and roadmap framing (`ai-readiness`)
+- workflow-level qualification and pilot decision logic (`adoption-eval`)
+- generic RAG architecture reference work (`hybrid-rag`)
+
+## start here
+- pilot spec: `docs/cro-command-agent-pilot.md`
+- security and policy contract: `docs/security-policy.md`
+- hardware and model routing: `docs/hardware-and-model-routing.md`
+- repo style research: `docs/repo-style-research.md`
+
+## current state
+This repo is in active pilot-build mode. The current focus is shipping a coherent CRO Command Agent spec and implementation scaffold aligned with the updated `adoption-eval` direction.
 
 ## archived docs
 Legacy planning and draft evaluation notes are kept in `docs/archive/`.

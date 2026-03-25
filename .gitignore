@@ -1,0 +1,14 @@
+# private/internal working files (never commit)
+internal/
+*.local.md
+*.internal.md
+
+# env and secrets
+.env
+.env.*
+!.env.example
+
+# local runtime artefacts
+logs/
+cache/
+state/

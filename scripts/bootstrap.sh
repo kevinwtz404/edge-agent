@@ -32,6 +32,10 @@ fi
 
 echo "[bootstrap] validating node and openclaw binaries"
 command -v node >/dev/null || { echo "node not found"; exit 1; }
+command -v npm >/dev/null || { echo "npm not found"; exit 1; }
 command -v openclaw >/dev/null || { echo "openclaw not found"; exit 1; }
+
+echo "[bootstrap] installing runtime dependencies"
+npm install
 
 echo "[bootstrap] done"

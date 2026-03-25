@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 echo "[doctor] checking binaries"
-for bin in node git openclaw jq; do
+for bin in node npm git openclaw jq; do
   if ! command -v "$bin" >/dev/null; then
     echo "[doctor] missing binary: $bin"
     exit 1

@@ -1,0 +1,14 @@
+{
+  "name": "edge-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pilot:start": "node src/index.js",
+    "pilot:check": "node src/index.js --check"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.0"
+  }
+}

@@ -54,5 +54,11 @@ Use:
 ## current state
 This repo is in active pilot-build mode. The current focus is shipping a coherent CRO Command Agent spec and implementation scaffold aligned with the updated `adoption-eval` direction.
 
+Runtime scaffold now included:
+- `src/index.js` bootstraps policy loading and output contract flow
+- `src/policy.js` enforces allowlist/approval checks in code layer
+- `scripts/bootstrap.sh` installs deps and validates required config files
+- `scripts/run-pilot.sh` runs checks and starts the local pilot runtime
+
 ## archived docs
 Legacy planning and draft evaluation notes are kept in `docs/archive/`.

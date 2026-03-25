@@ -17,5 +17,5 @@ echo "[run] CRO command agent pilot starting"
 echo "[run] gateway: ${OPENCLAW_GATEWAY_URL:-unset}"
 echo "[run] model routing: default=${DEFAULT_MODEL:-unset}, sensitive=${SENSITIVE_MODEL_ROUTING:-unset}"
 
-echo "[run] this scaffold currently validates startup posture and config readiness."
-echo "[run] next implementation step: bind runtime handlers to OpenClaw sessions and policy engine."
+npm run pilot:check
+npm run pilot:start

@@ -1,0 +1,14 @@
+{
+  "slack": [
+    "C_REVOPS_INTERNAL",
+    "C_SALES_MANAGERS"
+  ],
+  "email": [
+    "cro@company.com",
+    "revops@company.com",
+    "sales-manager-1@company.com"
+  ],
+  "leadershipEmail": [
+    "leadership@company.com"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "croUsers": [
+    {
+      "channel": "slack",
+      "userId": "U12345678",
+      "name": "CRO"
+    }
+  ],
+  "queryOnlyUsers": []
+}

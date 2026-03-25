@@ -37,7 +37,17 @@ Use this repo to:
 - pilot spec: `docs/cro-command-agent-pilot.md`
 - security and policy contract: `docs/security-policy.md`
 - hardware and model routing: `docs/hardware-and-model-routing.md`
+- questions and output contract: `docs/questions-and-outputs.md`
+- tooling and scope matrix: `docs/tooling-and-scope-matrix.md`
+- quickstart runbook: `docs/quickstart-pilot.md`
 - repo style research: `docs/repo-style-research.md`
+
+## portable setup
+This repo is structured to run as a portable pilot folder on a prepared Pi/Linux host.
+Use:
+- `.env.example` for environment bootstrapping
+- `config/policy/*.example.*` for policy allowlists and deny-zones
+- `scripts/doctor.sh`, `scripts/bootstrap.sh`, and `scripts/run-pilot.sh` for setup and execution flow
 
 ## current state
 This repo is in active pilot-build mode. The current focus is shipping a coherent CRO Command Agent spec and implementation scaffold aligned with the updated `adoption-eval` direction.

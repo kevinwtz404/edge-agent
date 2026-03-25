@@ -1,0 +1,13 @@
+denyZones:
+  schemas:
+    - hr
+    - payroll
+    - legal_privileged
+    - health
+  connectors:
+    - workday
+    - bamboohr
+  fields:
+    - salary
+    - compensation_band
+    - medical_info

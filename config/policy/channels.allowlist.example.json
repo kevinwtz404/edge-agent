@@ -1,0 +1,16 @@
+{
+  "inbound": [
+    {
+      "channel": "slack",
+      "id": "C_CRO_COMMAND",
+      "name": "cro-command"
+    }
+  ],
+  "outbound": [
+    {
+      "channel": "slack",
+      "id": "C_REVOPS_INTERNAL",
+      "name": "revops-internal"
+    }
+  ]
+}

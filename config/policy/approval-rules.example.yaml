@@ -1,0 +1,12 @@
+approvalRules:
+  leadershipComms:
+    requireApproval: true
+    channels: ["email", "slack"]
+  externalComms:
+    enabled: false
+  highImpactKeywords:
+    - "restructure"
+    - "termination"
+    - "legal"
+    - "board"
+  blockIfNoEvidence: true

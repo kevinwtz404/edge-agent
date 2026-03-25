@@ -1,0 +1,10 @@
+Check current time and scheduled cadence.
+If outside active hours, remain silent unless urgent risk threshold triggered.
+
+On each heartbeat:
+1. Check for new high-risk pipeline signals.
+2. Check for unanswered CRO questions.
+3. Check for pending approvals.
+4. Prepare a concise update only if action is needed.
+
+If nothing needs attention, return HEARTBEAT_OK.

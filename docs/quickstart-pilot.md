@@ -48,7 +48,7 @@ bash scripts/doctor.sh
 bash scripts/bootstrap.sh
 ```
 
-## 7) run pilot session
+## 8) run pilot session
 ```bash
 bash scripts/run-pilot.sh
 ```
@@ -67,3 +67,8 @@ bash scripts/run-pilot.sh
 - if policy files missing -> run file copy step again
 - if connector auth fails -> verify OAuth scopes and token validity
 - if send is blocked -> inspect policy files and recipient allowlist
+## troubleshooting
+- if policy files missing -> run file copy step again
+- if connector auth fails -> verify OAuth scopes and token validity
+- if send is blocked -> inspect policy files and recipient allowlist
+pient allowlist

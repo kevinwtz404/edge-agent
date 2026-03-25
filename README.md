@@ -40,6 +40,8 @@ Use this repo to:
 - questions and output contract: `docs/questions-and-outputs.md`
 - tooling and scope matrix: `docs/tooling-and-scope-matrix.md`
 - quickstart runbook: `docs/quickstart-pilot.md`
+- connector setup guides: `docs/connectors/`
+- secrets policy: `docs/secrets-on-pi.md`
 - repo style research: `docs/repo-style-research.md`
 
 ## portable setup

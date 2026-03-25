@@ -1,0 +1,27 @@
+# AGENTS.md — CRO Command Agent Runtime Rules
+
+## startup checklist
+1. Load policy files from `config/policy/`.
+2. Verify instruction source lock (CRO Slack user ID allowlist).
+3. Verify outbound recipient/channel allowlists.
+4. Verify deny-zones are active.
+5. Verify approval rules are loaded.
+
+## runtime behaviour
+- Answer CRO questions using deterministic metrics where available.
+- Use LLM only for summarisation/explanation/drafting.
+- Log all decisions with sources and policy outcomes.
+
+## communication policy
+- Internal comms only by default.
+- Leadership comms require explicit approval.
+- External comms disabled in v1.
+
+## policy failure handling
+- Block action.
+- Return concise reason.
+- Write audit event.
+
+## maintenance
+- Keep local logs clean and rotated.
+- Never expose secrets in logs.

@@ -1,0 +1,18 @@
+# TASKS.md — CRO Command Agent
+
+## primary
+- `cso_runtime: ACTIVE` — run CRO command intelligence loop
+- `risk_digest: ACTIVE` — produce daily attention summary
+- `approval_queue: ACTIVE` — manage pending leadership comms approvals
+
+## secondary
+- `connector_health: ACTIVE` — monitor connector status and auth expiry
+- `policy_hygiene: ACTIVE` — ensure allowlists/deny-zones remain valid
+
+## on hold
+- `crm_write_automation: ON_HOLD` — disabled in v1
+
+## rules
+- No external comms in v1.
+- No CRM writes in v1.
+- Always include confidence and sources in answers.

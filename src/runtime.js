@@ -15,17 +15,24 @@ export function buildAnswer({ question, metrics = [], risks = [], actions = [], 
   };
 }
 
-export function runQuestionFlow(question, qualifyScores = {}) {
+export async function runQuestionFlow({ question, qualifyScores = {}, connectors }) {
+  const signals = connectors
+    ? await connectors.getSignals()
+    : {
+        metrics: [],
+        risks: ['No connector data returned.'],
+        actions: ['Check connector initialisation.'],
+        assumptions: ['Fallback runtime path used.'],
+        sources: []
+      };
+
   return buildAnswer({
     question,
     qualifyScores,
-    metrics: [
-      { name: 'atRiskOpportunities', value: 'TBD' },
-      { name: 'noActivity14d', value: 'TBD' }
-    ],
-    risks: ['Data connectors not wired yet.'],
-    actions: ['Connect primary data source', 'Run baseline risk scan'],
-    assumptions: ['Using runtime scaffold output contract v1'],
-    sources: ['config/policy/*', '.env']
+    metrics: signals.metrics,
+    risks: signals.risks,
+    actions: signals.actions,
+    assumptions: signals.assumptions,
+    sources: signals.sources
   });
 }

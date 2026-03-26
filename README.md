@@ -1,64 +1,53 @@
 # edge-agent
 
-A practical OpenClaw implementation track for secure operational agents.
+OpenClaw runtime blueprint for controlled operational agents.
 
-## relationship to adoption-eval
-`adoption-eval` determines whether a workflow pilot should run and under what boundaries.
-`edge-agent` implements that approved pilot as an operational agent pattern.
+## why this exists
+This repository demonstrates an AI architecture pattern for high-trust operational use cases:
+- explicit permissions before autonomy
+- deterministic controls for risk and gating
+- model use for summarisation/drafting, not hidden decision logic
+- auditable behaviour as a first-class requirement
 
-Current practical use case: **CRO Command Agent** (read-first intelligence, controlled communications, strong policy gates).
+The aim is practical: build agent systems that can be reviewed, governed, and deployed without guesswork.
 
-## what this is for
-Use this repo to:
-- implement OpenClaw-native pilot agents from approved `adoption-eval` outputs
-- enforce permission and communication controls in runtime, not just policy docs
-- route deterministic checks and model-based summarisation safely
-- ship auditable operational patterns that are production-realistic
+## context
+This implementation was suggested by `adoption-eval` as a pilot candidate.
+Current instance: **CRO Command Agent**.
 
-## who this is for
-- RevOps and GTM operations teams running controlled pilots
-- technical teams implementing policy-gated agent runtimes
-- security-conscious operators who need auditability before autonomy
+It is built as a pilot-ready scaffold: runnable in mock mode today, and structured for live connector wiring later (for example your own CRM mirror, database, Slack, and email stack).
 
-## what this repo owns
-- OpenClaw-first runtime patterns for operational pilots
-- policy, permission, recipient, and approval gate design
-- deployment profile and hardware rationale for edge execution
-- observability, audit logging, and incident handling patterns
+## architectural stance
+- **policy-gated runtime**: allowlists, deny-zones, approval rules
+- **deterministic control layer**: explicit checks and predictable outcomes
+- **connector abstraction**: interfaces first, live integrations later
+- **artifacted execution**: each run produces inspectable outputs and audit events
 
-## what this repo does not own
-- organisation readiness diagnostics and roadmap framing (`ai-readiness`)
-- workflow-level qualification and pilot decision logic (`adoption-eval`)
-- generic RAG architecture reference work (`hybrid-rag`)
+## what is implemented
+- strict policy loading and validation
+- connector interface layer with mock adapters
+- runtime output contract for CRO-style question flow
+- run artifacts:
+  - `state/last-run.json`
+  - `logs/audit.log`
+- core tests for decision and policy behaviour
+- smoke chain for preflight/bootstrap/run validation
 
-## start here
+## evaluation approach
+This pilot is evaluated over a two-week window using explicit criteria (response quality, control adherence, audit completeness, and operational usefulness).
+
+## run locally (mock mode)
+```bash
+bash scripts/doctor.sh
+bash scripts/bootstrap.sh
+npm test
+npm run pilot:smoke
+bash scripts/run-pilot.sh
+```
+
+## key docs
 - pilot spec: `docs/cro-command-agent-pilot.md`
+- quickstart: `docs/quickstart-pilot.md`
+- readiness gates: `docs/readiness-checklist.md`
 - security and policy contract: `docs/security-policy.md`
-- hardware and model routing: `docs/hardware-and-model-routing.md`
-- questions and output contract: `docs/questions-and-outputs.md`
-- tooling and scope matrix: `docs/tooling-and-scope-matrix.md`
-- quickstart runbook: `docs/quickstart-pilot.md`
-- readiness checklist: `docs/readiness-checklist.md`
 - connector setup guides: `docs/connectors/`
-- secrets policy: `docs/secrets-on-pi.md`
-- repo style research: `docs/repo-style-research.md`
-
-## portable setup
-This repo is structured to run as a portable pilot folder on a prepared Pi/Linux host.
-Use:
-- `.env.example` for environment bootstrapping
-- `config/policy/*.example.*` for policy allowlists and deny-zones
-- `scripts/doctor.sh`, `scripts/bootstrap.sh`, and `scripts/run-pilot.sh` for setup and execution flow
-
-## current state
-This repo is in active pilot-build mode. The current focus is shipping a coherent CRO Command Agent spec and implementation scaffold aligned with the updated `adoption-eval` direction.
-
-Runtime scaffold now included:
-- `src/index.js` bootstraps policy loading and output contract flow
-- `src/policy.js` enforces allowlist/approval checks in code layer
-- `src/decision.js` applies deterministic qualification gate/score logic (Go/Not yet/No-go)
-- `scripts/bootstrap.sh` installs deps and validates required config files
-- `scripts/run-pilot.sh` runs checks and starts the local pilot runtime
-
-## archived docs
-Legacy planning and draft evaluation notes are kept in `docs/archive/`.

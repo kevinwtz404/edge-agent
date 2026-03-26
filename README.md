@@ -17,6 +17,32 @@ Current instance: **CRO Command Agent**.
 
 It is built as a pilot-ready scaffold: runnable in mock mode today, and structured for live connector wiring later (for example your own CRM mirror, database, Slack, and email stack).
 
+## what this agent does
+In this pilot pattern, the agent helps revenue leadership with three concrete jobs:
+
+1. **answer high-value commercial questions quickly**
+   - which opportunities are at risk right now
+   - where activity has stalled
+   - what is likely to slip and why
+
+2. **produce structured leadership-ready outputs**
+   - concise headline
+   - supporting numbers
+   - top risks
+   - recommended actions
+   - confidence and assumptions
+
+3. **support controlled communication workflows**
+   - draft internal Slack/email updates
+   - enforce recipient and approval rules before sends
+   - retain an evidence trail for review
+
+## why this is valuable
+For a CRO, this reduces time-to-insight and improves operational follow-through.
+For a CFO (or finance stakeholder), this improves decision quality because each recommendation is traceable, constrained by policy, and easier to audit.
+
+The value is not "more AI output". The value is faster, better-governed commercial decisions with clear accountability.
+
 ## architectural stance
 - **policy-gated runtime**: allowlists, deny-zones, approval rules
 - **deterministic control layer**: explicit checks and predictable outcomes

@@ -3,12 +3,15 @@
 ## goal
 Run the pilot from a portable folder on a Raspberry Pi 5 (or equivalent Linux host), with explicit policy and auth setup.
 
+## scope note
+This repo currently supports a **mock-ready scaffold**. You can run full policy-gated flow and artifacts without live Slack, email, CRM, or Supabase credentials.
+
 ## prerequisites
 - Node.js 22.16+ (24 recommended)
 - OpenClaw installed and reachable
 - Git installed
 - `jq` installed
-- OAuth/app credentials for connectors you enable (Slack, email provider, CRM/DB)
+- OAuth/app credentials for connectors you enable (only needed for future live wiring)
 
 ## 1) get the repo on device
 ```bash
@@ -34,7 +37,6 @@ cp config/policy/approval-rules.example.yaml config/policy/approval-rules.yaml
 ## 4) fill required configuration
 - set CRO Slack user id(s)
 - set allowed channels and recipients
-- set connector credentials (read-only scopes where possible)
 - configure deny-zones
 - configure approval thresholds/rules
 
@@ -46,6 +48,11 @@ bash scripts/doctor.sh
 ## 6) run pilot bootstrap
 ```bash
 bash scripts/bootstrap.sh
+```
+
+## 7) run pilot smoke test
+```bash
+npm run pilot:smoke
 ```
 
 ## 8) run pilot session
@@ -62,13 +69,10 @@ bash scripts/run-pilot.sh
 - answers include headline, numbers, risks, actions, confidence, and sources
 - non-allowlisted sends are blocked with policy reason
 - leadership-target comms require explicit approval
+- run artifacts are written to `state/last-run.json` and `logs/audit.log`
 
 ## troubleshooting
-- if policy files missing -> run file copy step again
-- if connector auth fails -> verify OAuth scopes and token validity
-- if send is blocked -> inspect policy files and recipient allowlist
-## troubleshooting
-- if policy files missing -> run file copy step again
-- if connector auth fails -> verify OAuth scopes and token validity
-- if send is blocked -> inspect policy files and recipient allowlist
-pient allowlist
+- if policy files missing -> rerun file copy step
+- if check fails -> inspect policy structure and required fields
+- if smoke fails -> inspect `state/last-run.json` and `logs/audit.log`
+- if send is blocked -> inspect policy allowlists and approval rules

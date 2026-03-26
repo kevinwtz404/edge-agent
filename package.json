@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "pilot:start": "node src/index.js",
-    "pilot:check": "node src/index.js --check"
+    "pilot:check": "node src/index.js --check",
+    "test": "node --test",
+    "pilot:smoke": "bash scripts/smoke.sh"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

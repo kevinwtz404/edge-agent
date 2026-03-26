@@ -38,10 +38,18 @@ In this pilot pattern, the agent helps revenue leadership with three concrete jo
    - retain an evidence trail for review
 
 ## why this is valuable
-For a CRO, this reduces time-to-insight and improves operational follow-through.
-For a CFO (or finance stakeholder), this improves decision quality because each recommendation is traceable, constrained by policy, and easier to audit.
+This pattern reduces time-to-insight on revenue risk and pipeline drift, while improving execution discipline after decisions are made.
 
-The value is not "more AI output". The value is faster, better-governed commercial decisions with clear accountability.
+It is designed so leadership can work from familiar channels instead of tooling dashboards or code:
+- key issues are surfaced proactively in Slack/email
+- complex data questions can be asked directly in natural language
+- decision-ready outputs are returned in a clear, structured format
+
+It also supports meeting preparation by turning operational data into concise executive-ready updates (for example summary briefings and slide-ready content delivered to Slack or email).
+
+Each recommendation is tied to explicit assumptions, source evidence, and policy controls, so outputs can be reviewed and trusted rather than treated as black-box suggestions.
+
+The value is not "more AI output". The value is faster decisions, cleaner follow-through, and clearer accountability.
 
 ## architectural stance
 - **policy-gated runtime**: allowlists, deny-zones, approval rules

@@ -1,4 +1,4 @@
-# edge-agent
+# cmd-agent
 
 OpenClaw runtime blueprint for controlled operational agents.
 
